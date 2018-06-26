@@ -111,6 +111,7 @@ public class Test01 {
 		for (Customer customer : customerList) {
 			System.out.println(customer.getCust_name());
 		}
+		System.out.println("1");
 		tx.commit();
 	}
 }
