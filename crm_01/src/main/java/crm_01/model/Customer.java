@@ -1,5 +1,8 @@
 package crm_01.model;
 
+import java.util.HashSet;
+import java.util.Set;
+
 public class Customer {
 	private Long cust_id;
 	private String cust_name;
@@ -10,6 +13,8 @@ public class Customer {
 	private String cust_linkman;
 	private String cust_phone;
 	private String cust_mobile;
+	
+	private Set<Linkman> linkmans = new HashSet<>();
 	public Long getCust_id() {
 		return cust_id;
 	}
@@ -71,4 +76,11 @@ public class Customer {
 				+ ", cust_linkman=" + cust_linkman + ", cust_phone=" + cust_phone + ", cust_mobile=" + cust_mobile
 				+ "]";
 	}
+	public Set<Linkman> getLinkmans() {
+		return linkmans;
+	}
+	public void setLinkmans(Set<Linkman> linkmans) {
+		this.linkmans = linkmans;
+	}
+
 }
