@@ -14,7 +14,7 @@ public class Customer {
 	private String cust_phone;
 	private String cust_mobile;
 	
-	private Set<Linkman> linkmans = new HashSet<>();
+	private Set<Linkman> linkmans = new HashSet<Linkman>();
 	public Long getCust_id() {
 		return cust_id;
 	}

@@ -83,4 +83,38 @@ public class Test02_cascade {
 		tx.commit();
 		
 	}
+	@Test
+	public void test04() {
+		Session session = HibernateUtils.getCurrentSession();
+		Transaction tx = session.beginTransaction();
+		
+		Customer customer = session.get(Customer.class, 4L);
+		session.delete(customer);
+		
+		tx.commit();
+		
+	}
+	@Test
+	public void test05() {
+		Session session = HibernateUtils.getCurrentSession();
+		Transaction tx = session.beginTransaction();
+		
+		Linkman linkman = session.get(Linkman.class, 3L);
+		session.delete(linkman);
+		
+		tx.commit();
+		
+	}
+	//多表操作
+	@Test
+	public void test06() {
+		Session session = HibernateUtils.getCurrentSession();
+		Transaction tx = session.beginTransaction();
+		
+		Linkman linkman = session.get(Linkman.class, 3L);
+		session.delete(linkman);
+		
+		tx.commit();
+		
+	}
 }
