@@ -4,13 +4,13 @@
     "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
 <hibernate-mapping>
 	<class name="crm_01.model.Role" table="sys_role">
-		<id name="role_id">
+		<id name="rid" column="role_id">
 			<generator class="native" ></generator>
 		</id>
-		<property name="role_name" ></property>
-		<property name="role_memo" ></property>
+		<property name="rname" column="role_name"></property>
+		<property name="rmemo" column="role_memo"></property>
 		
-		<set name="users" table="sys_user_role">
+		<set name="users" table="sys_user_role" inverse="true">
 			<key column="role_id"></key>
 			<many-to-many class="crm_01.model.User" column="user_id"></many-to-many>
 		</set>

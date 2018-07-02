@@ -18,13 +18,15 @@
 		<!-- Hibernate的可选项 -->
 		<property name="hibernate.show_sql">true</property>
 		<property name="hibernate.format_sql">true</property>
-		<property name="hibernate.hbm2ddl.auto">update</property>
+		<property name="hibernate.hbm2ddl.auto">validate</property>
 		<!-- thread维护session -->
 		<property name="hibernate.current_session_context_class">thread</property>
 		
 		<!-- 加载映射 -->
 		<mapping resource="hbm_xml/Customer.hbm.xml"/>
 		<mapping resource="hbm_xml/Linkman.hbm.xml"/>
+		<mapping resource="hbm_xml/Role.hbm.xml"/>
+		<mapping resource="hbm_xml/User.hbm.xml"/>
 	</session-factory>
 	
 </hibernate-configuration>

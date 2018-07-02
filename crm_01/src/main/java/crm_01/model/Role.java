@@ -6,6 +6,7 @@ import java.util.Set;
 public class Role {
 	private Long rid;
 	private String rname;
+	private String rmemo;
 	
 	// 一个角色中有多个所属的用户:
 	private Set<User> users = new HashSet<User>();
@@ -32,5 +33,13 @@ public class Role {
 
 	public void setUsers(Set<User> users) {
 		this.users = users;
+	}
+
+	public String getRmemo() {
+		return rmemo;
+	}
+
+	public void setRmemo(String rmemo) {
+		this.rmemo = rmemo;
 	}
 }
