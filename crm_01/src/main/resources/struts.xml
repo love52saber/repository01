@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC
+    "-//Apache Software Foundation//DTD Struts Configuration 2.3//EN"
+    "http://struts.apache.org/dtds/struts-2.3.dtd">
+<struts>
+	<constant name="struts.devMode" value="true" />
+	<package name=""></package>
+	<!-- 
+		<constant name="struts.objectFactory" value="spring"/>
+	 -->
+	<!-- 解决jetty下welcome-files不管用的bug -->
+	<package name="home" namespace="/" extends="struts-default">
+		<default-action-ref name="index"></default-action-ref>
+		<action name="index">
+			<result type="dispatcher" name="success">/index.jsp</result>
+		</action>
+	</package>
+	<package name="basicstruts2" extends="struts-default">
+		<!-- 需要进行权限控制的页面访问 -->
+		<action name="page_*_*">
+			<result type="dispatcher">/WEB-INF/pages/{1}/{2}.jsp</result>
+		</action>
+	</package>
+	
+	<include file="struts/struts-customer.xml"></include>
+</struts>

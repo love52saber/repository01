@@ -114,4 +114,7 @@ public class Test01 {
 		System.out.println("1");
 		tx.commit();
 	}
+	@Test
+	public void test07() {
+	}
 }
