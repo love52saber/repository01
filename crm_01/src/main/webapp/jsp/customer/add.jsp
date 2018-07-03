@@ -15,7 +15,7 @@
 </HEAD>
 <BODY>
 	<FORM id=form1 name=form1
-		action="${pageContext.request.contextPath }/customer_add.action"
+		action="${pageContext.request.contextPath }/customer_addCustomer.action"
 		method=post>
 		
 
@@ -64,11 +64,6 @@
 							
 							<TR>
 								
-<!-- 								<td>信息来源 ：</td> -->
-<!-- 								<td> -->
-<!-- 								<INPUT class=textbox id=sChannel2 -->
-<!-- 														style="WIDTH: 180px" maxLength=50 name="customer.custSource"> -->
-<!-- 								</td> -->
 								<td>联系人：</td>
 								<td>
 								<INPUT class=textbox id=sChannel2
@@ -92,28 +87,10 @@
 							</TR>
 							
 							<TR>
-<!-- 								<td>联系地址 ：</td> -->
-<!-- 								<td> -->
-<!-- 								<INPUT class=textbox id=sChannel2 -->
-<!-- 														style="WIDTH: 180px" maxLength=50 name="customer.custAddress"> -->
-<!-- 								</td> -->
-<!-- 								<td>邮政编码 ：</td> -->
-<!-- 								<td> -->
-<!-- 								<INPUT class=textbox id=sChannel2 -->
-<!-- 														style="WIDTH: 180px" maxLength=50 name="customer.custZip"> -->
-<!-- 								</td> -->
+
 							</TR>
 							<TR>
-<!-- 								<td>客户传真 ：</td> -->
-<!-- 								<td> -->
-<!-- 								<INPUT class=textbox id=sChannel2 -->
-<!-- 														style="WIDTH: 180px" maxLength=50 name="customer.custFax"> -->
-<!-- 								</td> -->
-<!-- 								<td>客户网址 ：</td> -->
-<!-- 								<td> -->
-<!-- 								<INPUT class=textbox id=sChannel2 -->
-<!-- 														style="WIDTH: 180px" maxLength=50 name="customer.custWebsite"> -->
-<!-- 								</td> -->
+
 							</TR>
 							<tr>
 								<td rowspan=2>

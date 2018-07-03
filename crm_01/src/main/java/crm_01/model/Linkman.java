@@ -3,7 +3,7 @@ package crm_01.model;
 public class Linkman {
 	private Long lkm_id;
 	private String lkm_name;
-	private String lkm_gender;
+	private Character lkm_gender;
 	private String lkm_phone;
 	private String lkm_mobile;
 	private String lkm_email;
@@ -23,12 +23,6 @@ public class Linkman {
 	}
 	public void setLkm_name(String lkm_name) {
 		this.lkm_name = lkm_name;
-	}
-	public String getLkm_gender() {
-		return lkm_gender;
-	}
-	public void setLkm_gender(String lkm_gender) {
-		this.lkm_gender = lkm_gender;
 	}
 	public String getLkm_phone() {
 		return lkm_phone;
@@ -71,6 +65,12 @@ public class Linkman {
 	}
 	public void setCustomer(Customer customer) {
 		this.customer = customer;
+	}
+	public Character getLkm_gender() {
+		return lkm_gender;
+	}
+	public void setLkm_gender(Character lkm_gender) {
+		this.lkm_gender = lkm_gender;
 	}
 	
 }
