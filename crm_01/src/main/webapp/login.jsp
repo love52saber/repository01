@@ -14,7 +14,7 @@ TD {
 
 <META content="MSHTML 6.00.6000.16809" name=GENERATOR></HEAD>
 <BODY>
-<FORM id=form1 name=form1 onsubmit="javascript:return WebForm_OnSubmit();" method=post>
+<FORM id=form1 name=form1 action="${pageContext.request.contextPath}/userAction_login.action"  method=post>
 
 <DIV id=UpdatePanel1>
 <DIV id=div1 
@@ -44,14 +44,14 @@ style="LEFT: 0px; POSITION: absolute; TOP: 0px; BACKGROUND-COLOR: #0066ff"></DIV
               <TR>
                 <TD style="HEIGHT: 28px" width=80>登 录 名：</TD>
                 <TD style="HEIGHT: 28px" width=150><INPUT id=txtName 
-                  style="WIDTH: 130px" name=txtName></TD>
+                  style="WIDTH: 130px" name="username"></TD>
                 <TD style="HEIGHT: 28px" width=370><SPAN 
                   id=RequiredFieldValidator3 
                   style="FONT-WEIGHT: bold; VISIBILITY: hidden; COLOR: white">请输入登录名</SPAN></TD></TR>
               <TR>
                 <TD style="HEIGHT: 28px">登录密码：</TD>
                 <TD style="HEIGHT: 28px"><INPUT id=txtPwd style="WIDTH: 130px" 
-                  type=password name=txtPwd></TD>
+                  type=password name="password"></TD>
                 <TD style="HEIGHT: 28px"><SPAN id=RequiredFieldValidator4 
                   style="FONT-WEIGHT: bold; VISIBILITY: hidden; COLOR: white">请输入密码</SPAN></TD></TR>
               <TR>
@@ -67,7 +67,7 @@ style="LEFT: 0px; POSITION: absolute; TOP: 0px; BACKGROUND-COLOR: #0066ff"></DIV
                 <TD></TD>
                 <TD><INPUT id=btn 
                   style="BORDER-TOP-WIDTH: 0px; BORDER-LEFT-WIDTH: 0px; BORDER-BOTTOM-WIDTH: 0px; BORDER-RIGHT-WIDTH: 0px" 
-                  onclick='javascript:WebForm_DoPostBackWithOptions(new WebForm_PostBackOptions("btn", "", true, "", "", false, false))' 
+                  onclick='document.getElementById("form1").submit()' 
                   type=image src="images/login_button.gif" name=btn> 
               </TD></TR></TBODY></TABLE></TD></TR></TBODY></TABLE></TD></TR>
   <TR>

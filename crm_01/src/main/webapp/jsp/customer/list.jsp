@@ -24,7 +24,7 @@
 </HEAD>
 <BODY>
 	<FORM id="customerForm" name="customerForm"
-		action="${pageContext.request.contextPath }/customerServlet?method=list"
+		action="${pageContext.request.contextPath }/customer_listCustomer.action"
 		method=post>
 		
 		<TABLE cellSpacing=0 cellPadding=0 width="98%" border=0>
@@ -63,7 +63,7 @@
 												<TR>
 													<TD>客户名称：</TD>
 													<TD><INPUT class=textbox id=sChannel2
-														style="WIDTH: 80px" maxLength=50 name="custName"></TD>
+														style="WIDTH: 80px" maxLength=50 name="customer.cust_name"></TD>
 													
 													<TD><INPUT class=button id=sButton2 type=submit
 														value=" 筛选 " name=sButton2></TD>
@@ -89,19 +89,19 @@
 													<TD>手机</TD>
 													<TD>操作</TD>
 												</TR>
-												<c:forEach items="${list }" var="customer">
+												<c:forEach items="${customerList }" var="customer">
 												<TR
 													style="FONT-WEIGHT: normal; FONT-STYLE: normal; BACKGROUND-COLOR: white; TEXT-DECORATION: none">
-													<TD>${customer.custName }</TD>
-													<TD>${customer.custLevel }</TD>
-													<TD>${customer.custSource }</TD>
-													<TD>${customer.custLinkman }</TD>
-													<TD>${customer.custPhone }</TD>
-													<TD>${customer.custMobile }</TD>
+													<TD>${customer.cust_name }</TD>
+													<TD>${customer.cust_level }</TD>
+													<TD>${customer.cust_source }</TD>
+													<TD>${customer.cust_linkman }</TD>
+													<TD>${customer.cust_phone }</TD>
+													<TD>${customer.cust_mobile }</TD>
 													<TD>
-													<a href="${pageContext.request.contextPath }/customerServlet?method=edit&custId=${customer.custId}">修改</a>
+													<a href="${pageContext.request.contextPath }/customer_toEditCustomer.action?customer.cust_id=${customer.cust_id}">修改</a>
 													&nbsp;&nbsp;
-													<a href="${pageContext.request.contextPath }/customerServlet?method=delete&custId=${customer.custId}">删除</a>
+													<a href="${pageContext.request.contextPath }/customer_delCustomer.action?customer.cust_id=${customer.cust_id}">删除</a>
 													</TD>
 												</TR>
 												

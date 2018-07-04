@@ -6,6 +6,12 @@
 	<package name="customer" namespace="/" extends="struts-default">
 		<action name="customer_*" class="crm_01.web.CustomerAction" method="{1}" >
 			<result type="dispatcher" name="toAdd">jsp/customer/add.jsp</result>
+			<result name="listCustomer">jsp/customer/list.jsp</result>
+			<result name="editCustomer">jsp/customer/edit.jsp</result>
+			<result name="redirectToListCustomer" type="redirectAction">
+				<param name="actionName">customer_listCustomer</param>
+				<param name="namespace">/</param>
+			</result>
 		</action>
 	</package>
 </struts>
