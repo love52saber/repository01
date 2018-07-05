@@ -21,14 +21,15 @@ public class UserServiceImpl implements UserService {
 	@Autowired
 	private UserDao userDao;
 
-	public User login(User user){
+	public User login(User user) throws Exception{
 		Session session = HibernateUtils.getCurrentSession();
 		Transaction tx = session.beginTransaction();
 		
 		User existUser = userDao.queryUserByUsernameAndPassword(user.getUsername(),user.getPassword());
 		
 		if (existUser==null) {
-			throw new RuntimeException("用户名或密码错误");
+//			throw new RuntimeException("用户名或密码错误");
+			throw new Exception("用户名或密码错误");
 		}
 		
 		return existUser;

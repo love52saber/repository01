@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+<%@ taglib uri="/struts-tags" prefix="s" %>
 <HTML xmlns="http://www.w3.org/1999/xhtml">
 <HEAD>
 <META http-equiv=Content-Type content="text/html; charset=utf-8">
@@ -41,6 +42,9 @@ style="LEFT: 0px; POSITION: absolute; TOP: 0px; BACKGROUND-COLOR: #0066ff"></DIV
           <TD>
             <TABLE cellSpacing=0 cellPadding=2 border=0>
               <TBODY>
+              <tr>
+              	<TD style="HEIGHT: 28px" width=80><s:actionerror/></TD>
+              </tr>
               <TR>
                 <TD style="HEIGHT: 28px" width=80>登 录 名：</TD>
                 <TD style="HEIGHT: 28px" width=150><INPUT id=txtName 
@@ -75,5 +79,12 @@ style="LEFT: 0px; POSITION: absolute; TOP: 0px; BACKGROUND-COLOR: #0066ff"></DIV
 border=0></TD></TR></TBODY></TABLE></DIV></DIV>
 
 
-</FORM></BODY></HTML>
+</FORM></BODY>
+
+<script type="text/javascript">
+	if (window.parent.length>0) {
+		window.parent.location = window.location;
+	}
+</script>
+</HTML>
 

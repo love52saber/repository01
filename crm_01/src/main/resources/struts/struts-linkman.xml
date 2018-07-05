@@ -3,7 +3,7 @@
     "-//Apache Software Foundation//DTD Struts Configuration 2.3//EN"
     "http://struts.apache.org/dtds/struts-2.3.dtd">
 <struts>
-	<package name="linkman" namespace="/" extends="struts-default">
+	<package name="linkman" namespace="/" extends="default">
 		<action name="linkman_*" method="{1}" class="crm_01.web.LinkmanAction">
 			<result name="listLinkman">jsp/linkman/list.jsp</result>
 			<result name="addLinkman">jsp/linkman/add.jsp</result>

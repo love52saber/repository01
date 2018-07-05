@@ -4,6 +4,6 @@ import crm_01.model.User;
 
 public interface UserService {
 
-	User login(User user);
+	User login(User user) throws Exception;
 
 }

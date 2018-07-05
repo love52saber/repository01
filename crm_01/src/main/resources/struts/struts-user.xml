@@ -3,7 +3,7 @@
     "-//Apache Software Foundation//DTD Struts Configuration 2.3//EN"
     "http://struts.apache.org/dtds/struts-2.3.dtd">
 <struts>
-	<package name="user" namespace="/" extends="struts-default">
+	<package name="user" namespace="/" extends="default">
 		<action name="userAction_*" class="crm_01.web.UserAction" method="{1}" >
 			<result type="redirect" name="index">index.jsp</result>
 			<result type="redirect" name="error">login.jsp</result>

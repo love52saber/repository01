@@ -16,9 +16,15 @@ public class UserAction extends BaseAction implements ModelDriven<User> {
 	
 	private User user = new User();
 	
-	public String login() throws Exception {
-		User existUser = userService.login(user);
-		request.getSession().setAttribute("existUser", existUser);
+	public String login()  {
+		User existUser = new User();
+		try {
+			existUser = userService.login(user);
+		} catch (Exception e) {
+			e.printStackTrace();
+			addActionError(e.getMessage());
+		}
+		request.getSession().setAttribute("user", existUser);
 		
 		return "index";
 	}
