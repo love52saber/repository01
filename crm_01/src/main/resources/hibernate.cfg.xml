@@ -21,6 +21,7 @@
 		<property name="hibernate.hbm2ddl.auto">validate</property>
 		<!-- thread维护session -->
 		<property name="hibernate.current_session_context_class">thread</property>
+		<property name="hibernate.connection.isolation">4</property>
 		
 		<!-- 加载映射 -->
 		<mapping resource="hbm_xml/Customer.hbm.xml"/>

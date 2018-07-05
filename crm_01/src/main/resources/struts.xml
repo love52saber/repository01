@@ -3,24 +3,37 @@
     "-//Apache Software Foundation//DTD Struts Configuration 2.3//EN"
     "http://struts.apache.org/dtds/struts-2.3.dtd">
 <struts>
+
 	<constant name="struts.devMode" value="true" />
-	<package name=""></package>
 	<!-- 
 		<constant name="struts.objectFactory" value="spring"/>
 	 -->
+	 
 	<!-- 解决jetty下welcome-files不管用的bug -->
-	<package name="home" namespace="/" extends="struts-default">
+
+	<package name="default" namespace="/" extends="struts-default">
+		<interceptors>
+			<interceptor name="login" class="crm_01.web.interceptor.LoginInterceptor" >
+			</interceptor>
+			<interceptor-stack name="default">
+				<interceptor-ref name="login">
+					<param name="excludeMethods">login</param>
+				</interceptor-ref>
+				<interceptor-ref name="defaultStack"></interceptor-ref>
+			</interceptor-stack>
+		</interceptors>
+		<default-interceptor-ref name="default"></default-interceptor-ref>
 		<default-action-ref name="index"></default-action-ref>
+		<global-results>
+			<result name="login">login.jsp</result>
+		</global-results>
+		
 		<action name="index">
 			<result type="dispatcher" name="success">/index.jsp</result>
 		</action>
 	</package>
-	<package name="basicstruts2" extends="struts-default">
-		<!-- 需要进行权限控制的页面访问 -->
-		<action name="page_*_*">
-			<result type="dispatcher">/WEB-INF/pages/{1}/{2}.jsp</result>
-		</action>
-	</package>
 	
 	<include file="struts/struts-customer.xml"></include>
+	<include file="struts/struts-linkman.xml"></include>
+	<include file="struts/struts-user.xml"></include>
 </struts>

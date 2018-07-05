@@ -12,6 +12,8 @@ public class Linkman {
 	private String lkm_memo;
 	
 	private Customer customer;
+	
+	private Long cust_id;
 	public Long getLkm_id() {
 		return lkm_id;
 	}
@@ -72,5 +74,12 @@ public class Linkman {
 	public void setLkm_gender(Character lkm_gender) {
 		this.lkm_gender = lkm_gender;
 	}
+	public Long getCust_id() {
+		return cust_id;
+	}
+	public void setCust_id(Long cust_id) {
+		this.cust_id = cust_id;
+	}
+
 	
 }

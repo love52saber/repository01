@@ -16,7 +16,7 @@
 		<property name="cust_phone" column="cust_phone"></property>
 		<property name="cust_mobile" column="cust_mobile"></property>
 		
-		<set name="linkmans" cascade="all">
+		<set name="linkmans" inverse="true">
 			<key column="lkm_cust_id" ></key>
 			<one-to-many class="crm_01.model.Linkman" />
 		</set>

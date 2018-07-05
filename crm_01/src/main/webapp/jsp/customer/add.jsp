@@ -77,12 +77,12 @@
 								<td>固定电话 ：</td>
 								<td>
 								<INPUT class=textbox id=sChannel2
-														style="WIDTH: 180px" maxLength=50 name="customer.custPhone">
+														style="WIDTH: 180px" maxLength=50 name="customer.cust_phone">
 								</td>
 								<td>移动电话 ：</td>
 								<td>
 								<INPUT class=textbox id=sChannel2
-														style="WIDTH: 180px" maxLength=50 name="customer.cust_phone">
+														style="WIDTH: 180px" maxLength=50 name="customer.cust_mobile">
 								</td>
 							</TR>
 							
