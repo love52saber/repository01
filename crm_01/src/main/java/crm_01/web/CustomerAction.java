@@ -8,7 +8,6 @@ import org.apache.struts2.interceptor.RequestAware;
 import org.apache.struts2.interceptor.ServletRequestAware;
 import org.hibernate.criterion.DetachedCriteria;
 import org.hibernate.criterion.Restrictions;
-import org.junit.runner.Request;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 
@@ -49,7 +48,7 @@ public class CustomerAction extends ActionSupport implements ServletRequestAware
 	}
 	
 	public String toEditCustomer() {
-		Long cust_id = customer!=null?customer.getCust_id():0l;
+		Long cust_id = customer!=null?customer.getCust_id():0L;
 		Customer customer = customerService.queryCustomerById(cust_id);
 		request.setAttribute("customer", customer);
 		return "editCustomer";
