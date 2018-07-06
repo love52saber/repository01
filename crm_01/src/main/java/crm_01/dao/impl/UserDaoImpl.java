@@ -25,6 +25,11 @@ public class UserDaoImpl implements UserDao{
 		
 		return existUser;
 	}
-	
-	
+
+	@Override
+	public void add() {
+		System.out.println("add");
+	}
+
+
 }
