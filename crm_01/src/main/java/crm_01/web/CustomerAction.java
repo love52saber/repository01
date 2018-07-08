@@ -48,7 +48,7 @@ public class CustomerAction extends ActionSupport implements ServletRequestAware
 	}
 	
 	public String toEditCustomer() {
-		Long cust_id = customer!=null?customer.getCust_id():0l;
+		Long cust_id = customer!=null?customer.getCust_id():0L;
 		Customer customer = customerService.queryCustomerById(cust_id);
 		request.setAttribute("customer", customer);
 		return "editCustomer";

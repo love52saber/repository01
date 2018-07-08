@@ -6,4 +6,5 @@ public interface UserDao {
 
 	User queryUserByUsernameAndPassword(String username, String password);
 
+	void add();
 }
